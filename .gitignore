@@ -1,0 +1,23 @@
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# --- Database & Sensitive Info ---
+# Since DB_CONFIG is inside your script, ensure you don't share 
+# your real password if you make this repository public.
+.streamlit/secrets.toml
+
+# --- Operating System ---
+.DS_Store
+Thumbs.db
+
+# --- Data & Logs ---
+# Optionally ignore the source data if it is too large for GitHub
+# source_data/delhi_metro_trips.json
+*.log

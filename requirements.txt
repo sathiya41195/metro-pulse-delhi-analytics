@@ -1,0 +1,15 @@
+# Data Manipulation
+pandas
+pathlib
+
+# Database Connectivity
+sqlalchemy
+pymysql
+cryptography
+
+# Web Application Framework
+streamlit
+
+# Optional: Data Visualization (if expanding analysis)
+plotly
+matplotlib
