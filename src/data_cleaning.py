@@ -102,7 +102,7 @@ def main():
         st.success(f"Loaded data from: `{json_path.name}`")
         st.dataframe(df.head(), use_container_width=True, hide_index=True)    
     #save cleaned data to csv
-    if st.write_stream("Export Cleaned Data to CSV"):
+    if st.button("Export Cleaned Data to CSV"):
         save_to_csv(df, csv_path)
         st.info(f"File saved to: `{csv_path}`")
         load_Tab = True;
