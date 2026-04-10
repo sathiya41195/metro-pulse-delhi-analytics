@@ -1,4 +1,5 @@
 CREATE TABLE `delhi_metro_trips` (
+  `ID` int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
   `TripID` bigint DEFAULT NULL,
   `Date` datetime DEFAULT NULL,
   `From_Station` text,
@@ -9,4 +10,4 @@ CREATE TABLE `delhi_metro_trips` (
   `Passengers` double DEFAULT NULL,
   `Ticket_Type` text,
   `Remarks` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;

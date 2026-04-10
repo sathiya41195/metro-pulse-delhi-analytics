@@ -6,11 +6,11 @@ import streamlit as st
 
 # --- 1. DATABASE LAYER (Configuration & Connection) ---
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "S@th!ya41195",
+    "host": "mysql-a60948b-sathya41195-1055.d.aivencloud.com",
+    "user": "avnadmin",
+    "password": "AVNS_6U99Jq6I3A9FqHqTRCz",
     "database": "metro",
-    "port": "3306"
+    "port": "13687"
 }
 
 def get_engine():
