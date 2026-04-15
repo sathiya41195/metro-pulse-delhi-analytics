@@ -43,10 +43,10 @@ GROUP BY Station
 order by 2 desc lIMIT 10;
 
 #8. Which station pairs are most frequently used for travel?
-
+# need to change the logic 
 SELECT `From_Station`,To_Station,  count(`TripID`) AS Frequently_used_count FROM delhi_metro_trips
 GROUP BY `From_Station`,To_Station
-order by 3 desc lIMIT 10;
+order by 3 desc;
 
 #9. What is the total revenue generated from all trips?
 
@@ -57,7 +57,6 @@ SELECT AVG(`Fare`) AS average_revenue FROM delhi_metro_trips;
 #11. Which routes generate the highest revenue per kilometer?
 
 SELECT `From_Station`, `To_Station`, SUM(`Fare`)/Sum(`Distance_km`) AS revenue_per_km FROM delhi_metro_trips
-WHERE `From_Station` like '%Noida%'
 GROUP BY `From_Station`, `To_Station`
 order by 3 desc;
 
@@ -108,10 +107,10 @@ SELECT `Remarks`, SUM(`Fare`) AS total_revenue FROM delhi_metro_trips
 GROUP BY `Remarks` order by 2 desc;
 
 #19. What is the monthly passenger trend across the dataset?
-
-SELECT DATE_FORMAT(`Date`, '%Y-%m') AS month, SUM(`passengers`) AS monthly_trend FROM delhi_metro_trips
+# will change the logic to calculate month alone
+SELECT monthname(`Date`) AS month, SUM(`passengers`) AS monthly_trend FROM delhi_metro_trips
 GROUP BY month
-order by 1 asc;
+order by 2 desc
 
 #20. Which travel condition has the highest average passenger count per trip?
 
